@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--meta tag-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+  <!-- Ionicons script -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!--css-->
+  <style>
+    body {
+      background: var(--background);
+      color: var(--Text);
+      font-family: 'Fredoka', sans-serif;
+      animation: fadeIn 1s;
+      transition: all 0.3s ease-in-out;
+      margin: auto;
+      height: 100vh;
+    }
+
+    /* theme for light mode */
+    :root {
+      --Text: #2C2A38;
+      --background: #F9FAFE;
+      --Element: #FF005E;
+    }
+
+    /* theme for dark mode */
+    .Dark-Mode {
+      --Text: #F9FAFE;
+      --background: #2C2A38;
+      --Element: #FF005E;
+    }
+
+    /* toggle button */
+    .Theme-toggle {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .Theme-toggle ion-icon {
+      margin: 3px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* the toggle switch */
+    .toggle {
+      position: relative;
+      width: 35px;
+      height: 15px;
+      background-color: rgba(0, 0, 0, 0);
+      border-radius: 34px;
+      border: 2px solid lightgray;
+      cursor: pointer;
+      display: inline-block;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* the toggle switch ball */
+
+    .toggle:before {
+      content: "";
+      position: absolute;
+      height: 11px;
+      width: 11px;
+      background-color: #ff005e;
+      border-radius: 50%;
+      top: 2px;
+      left: 1.7px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* the toggle switch ball when switch is active */
+
+    .toggle.active:before {
+      left: calc(100% - 11px - 1.7px);
+    }
+
+    footer {
+      margin: auto;
+    }
+
+    .line {
+      margin: auto;
+      background-color: #FF005E;
+      height: 3px;
+      width: 15%;
+      border-radius: 20px;
+      border: 1px solid #FF005E;
+      margin-bottom: 40px;
+      margin-top: 30px;
+    }
+
+    .Text1 {
+      text-align: center;
+      font-family: 'Fredoka', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      margin: auto;
+      margin-bottom: 13px;
+      color: #B3BECD;
+    }
+
+    .Text2 {
+      text-align: center;
+      text-decoration: none;
+      margin: auto;
+      margin-bottom: 8px;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      font-style: normal;
+      color: #B3BECD;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .Text3 {
+      text-align: center;
+      margin: auto;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 800;
+      line-height: 15px;
+      font-size: 12px;
+      font-style: normal;
+      color: #B3BECD;
+      text-transform: uppercase;
+    }
+
+    .Text4 {
+      text-align: center;
+      margin: auto;
+      font-family: 'Fredoka', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      color: #B3BECD;
+    }
+
+    .Text4 a {
+      text-decoration: none;
+      font-family: 'Fredoka', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      color: #B3BECD;
+    }
+
+    .Text5 {
+      text-align: center;
+      font-family: 'Fredoka', sans-serif;
+      font-style: normal;
+      margin: auto;
+      margin-bottom: 30px;
+      color: #B3BECD;
+    }
+
+    .copyright {
+      text-align: center;
+      margin: auto;
+      font-family: 'Fredoka', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 15px;
+      color: #B3BECD;
+    }
+
+    .social-icon {
+      font-size: 17px;
+      color: #B3BECD;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 1px;
+    }
+  </style>
+  <title>Theme toggle with IonIcons</title>
+</head>
+
+<body>
+  <div class="Theme-toggle">
+    <ion-icon class="sunIcon" name="sunny"></ion-icon>
+    <div class="toggle"></div>
+    <ion-icon class="moonIcon" name="moon"></ion-icon>
+  </div>
+  <!-- footer start -->
+  <footer>
+    <hr class="line">
+    <h4 class="Text5">TEAM MRK</h4>
+    <p class="Text1">Find an issue with this page? <span>Fix it on GitHub.</span></p>
+    <p class="Text2">Need help? Email <a class="Text2" href="mailto:mrkhidden64@gmail.com,khaneshan796@gmail.com?subject=Hello%20MRK%20I%20Need%20Help&body=Write%20here%20your%20request" target="_top">mrkhidden64@gmail.com</a></p>
+    <div class="social-icon">
+      <a class="social-icon" target="_blank" href="https://github.com/Eshankhan796"><ion-icon class="social-icon" name="logo-github"></ion-icon></a>
+      <a class="social-icon" target="_blank" href="https://www.facebook.com/siddek.ek.796"><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a>
+      <a class="social-icon" target="_blank" href="https://discord.com/users/823495729841831947"><ion-icon class="social-icon" name="logo-discord"></ion-icon></a>
+    </div>
+    <p class="Text3"><strong>special thanks to</strong></p>
+    <p class="Text4"><a href="https://ionic.io/ionicons/" target="blank">IonIcons</a> | <a href="https://spck.io/" target="blank">Spck</a> | <a href="https://replit.com/" target="blank">Replit</a></p>
+    <p class="copyright">Copyright ©️ 2023 Eshan khan</p>
+  </footer>
+  <!-- JavaScript -->
+  <script>
+    const body = document.querySelector("body");
+    const toggle = document.querySelector(".toggle");
+    let sunIcon = document.querySelector(".sunIcon");
+    let moonIcon = document.querySelector(".moonIcon");
+
+    let Theme = localStorage.getItem("Data");
+
+    if (Theme && Theme === "Dark") {
+      body.classList.add("Dark-Mode");
+      toggle.classList.add("active");
+      sunIcon.setAttribute("name", "sunny-outline");
+    } else if (Theme && Theme === "light") {
+      moonIcon.setAttribute("name", "moon-outline");
+    }
+
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("Dark-Mode");
+
+      if (!body.classList.contains("Dark-Mode")) {
+        return localStorage.setItem("Data", "light");
+      } else {
+        localStorage.setItem("Data", "Dark");
+
+      }
+    });
+
+    //when the toggle switch is active
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+    });
+
+    //toggle the icons to filled or outline 
+    toggle.addEventListener("click", () => {
+      if (toggle.classList.contains("active")) {
+        sunIcon.setAttribute("name", "sunny-outline");
+        moonIcon.setAttribute("name", "moon");
+      } else {
+        sunIcon.setAttribute("name", "sunny");
+        moonIcon.setAttribute("name", "moon-outline");
+      }
+    });
+  </script>
+</body>
+
+</html>
